@@ -88,19 +88,19 @@ export default function newsView() {
             });
 
             const tableFooter = document.querySelector('.pagination') as HTMLElement;
-            tableFooter.setAttribute('class', 'd-flex justify-content-center mb-2 align-items-center');
+            tableFooter.setAttribute('class', 'd-flex mb-5 justify-content-center mb-2 align-items-center');
 
             const leftButton = document.createElement('button');
             leftButton.innerText = '<';
-            leftButton.setAttribute('class', 'btn btn-primary left-btn');
+            leftButton.setAttribute('class', 'btn mb-5 btn-primary left-btn');
 
             const count = document.createElement('div');
             count.innerText = '1';
-            count.setAttribute('class', 'mx-3 count');
+            count.setAttribute('class', 'mx-3 mb-5 count');
             localStorage.setItem('count', count.innerText);
             const rightButton = document.createElement('button');
             rightButton.innerText = '>';
-            rightButton.setAttribute('class', 'btn btn-primary right-btn');
+            rightButton.setAttribute('class', 'btn mb-5 btn-primary right-btn');
 
             tableFooter.appendChild(leftButton);
             tableFooter.appendChild(count);
@@ -172,19 +172,19 @@ export default function newsView() {
             });
 
             const tableFooter = document.querySelector('.pagination') as HTMLElement;
-            tableFooter.setAttribute('class', 'd-flex mb-2 justify-content-center align-items-center');
+            tableFooter.setAttribute('class', 'd-flex mb-5 justify-content-center align-items-center');
 
             const leftButton = document.createElement('button');
             leftButton.innerText = '<';
-            leftButton.setAttribute('class', 'btn btn-primary left-btn');
+            leftButton.setAttribute('class', 'btn mb-5 btn-primary left-btn');
 
             const countElement = document.createElement('div');
             countElement.innerText = count + '';
-            countElement.setAttribute('class', 'mx-3 count');
+            countElement.setAttribute('class', 'mx-3 mb-5 count');
 
             const rightButton = document.createElement('button');
             rightButton.innerText = '>';
-            rightButton.setAttribute('class', 'btn btn-primary right-btn');
+            rightButton.setAttribute('class', 'btn mb-5 btn-primary right-btn');
 
             tableFooter.appendChild(leftButton);
             tableFooter.appendChild(count);

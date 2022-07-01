@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
-                                        <th>Description</th>
+                                        <th class="description">Description</th>
                                         <th>Url</th>
                                     </tr>
                                 </thead>
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       table.innerHTML = table.innerHTML + `<tr>
                                                     <th>${index + 1}</th>
                                                     <td>${value.name}</td>
-                                                    <td>${value.description}</td>
+                                                    <td class="description">${value.description}</td>
                                                     <td><a href=${value.url} target="_blank">Url</a></td>
                                                  </tr>`;
     });
@@ -69,19 +69,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const tableFooter = document.querySelector('.pagination') as HTMLElement;
-    tableFooter.setAttribute('class', 'd-flex justify-content-center mb-2 align-items-center');
+    tableFooter.setAttribute('class', 'd-flex justify-content-center mb-5 align-items-center');
 
     const leftButton = document.createElement('button');
     leftButton.innerText = '<';
-    leftButton.setAttribute('class', 'btn btn-primary left-btn');
+    leftButton.setAttribute('class', 'btn btn-primary mb-5 left-btn');
 
     const count = document.createElement('div');
     count.innerText = (localStorage.getItem('count') as string);
-    count.setAttribute('class', 'mx-3 count');
+    count.setAttribute('class', 'mx-3 mb-5 count');
 
     const rightButton = document.createElement('button');
     rightButton.innerText = '>';
-    rightButton.setAttribute('class', 'btn btn-primary right-btn');
+    rightButton.setAttribute('class', 'btn btn-primary mb-5 right-btn');
 
     tableFooter.appendChild(leftButton);
     tableFooter.appendChild(count);
