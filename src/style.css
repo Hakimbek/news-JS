@@ -1,0 +1,27 @@
+body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.height-adder {
+    height: 82vh;
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+    .footer, .header {
+        position: static !important;
+    }
+
+    .content-wrapper, .content {
+        margin-top: 0 !important;
+    }
+
+    .description {
+        display: none !important;
+    }
+}
